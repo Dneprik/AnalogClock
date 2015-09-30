@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnalogClock.Views.HomePage" Padding="20">
+
+
+    <RelativeLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Image x:Name="Clockimg" Source="clock.png" WidthRequest="400"
+               HeightRequest="400" />
+
+        <BoxView Color="Black"
+                 x:Name="HoursArrow"
+                 WidthRequest="100"
+                 HeightRequest="10"
+                 RelativeLayout.XConstraint="202"
+                 RelativeLayout.YConstraint="200"
+                 Rotation="{Binding HoursArrowRotation}"
+                 AnchorX="0"
+                 AnchorY="0" />
+
+        <BoxView Color="Black"
+                 x:Name="MinutesArrow"
+                 WidthRequest="120"
+                 HeightRequest="5"
+                 RelativeLayout.XConstraint="201"
+                 RelativeLayout.YConstraint="200"
+                 Rotation="{Binding MinutesArrowRotation}"
+                 AnchorX="0"
+                 AnchorY="0" />
+
+        <BoxView Color="Red"
+                 x:Name="SecondsArrow"
+                 WidthRequest="130"
+                 HeightRequest="4"
+                 RelativeLayout.XConstraint="201"
+                 RelativeLayout.YConstraint="200"
+                 Rotation="{Binding SecondsArrowRotation}"
+                 AnchorX="0"
+                 AnchorY="0" />
+
+        <Image Source="circle_blue.png" VerticalOptions="CenterAndExpand"
+               WidthRequest="40"
+               HeightRequest="40"
+               RelativeLayout.XConstraint="180"
+               RelativeLayout.YConstraint="178" />
+
+    </RelativeLayout>
+</ContentPage>
